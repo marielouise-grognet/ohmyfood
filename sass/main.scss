@@ -6,7 +6,7 @@ $gray-light:#F2F2F2;
 $gray-medium : #D9D9D9;
 $footer-background:#444140;
 $card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
-$width-max-desktop:1440px;
+$width-max-desktop:3280px;
 
 @mixin text-center {
     display: flex;
@@ -27,7 +27,7 @@ $width-max-desktop:1440px;
 }
 
 body {
-    max-width: 1440px;
+    max-width: 3280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,7 +360,7 @@ footer {
 
 /*****************MEDIA QUERIS DESKTOP**********************/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
 
 body {
     margin-left: auto;
@@ -374,7 +374,7 @@ body {
 }
 
 header {
-    max-width: 1440px;
+    max-width: 3280px;
 }
 
 .introBlock {
@@ -388,7 +388,7 @@ header {
 }
 
 .functionnementBlock {
-    padding : 10px 130px;
+    padding : 10px 200px;
 
     .titleBlock {
         padding-left: 5px;
@@ -400,7 +400,7 @@ header {
 }
 
 .restaurantBlock {
-    padding: 0 130px;
+    padding: 0 200px;
 
     .titleBlock {
         padding-left: 5px;
@@ -410,9 +410,10 @@ header {
         flex-direction: row;
         flex-wrap: wrap;
         gap:80px;
+        justify-content: space-between;
 
         .card {
-            width:450px;
+            width:45%;
             height:280px;
 
             .name-localisation-heart {
