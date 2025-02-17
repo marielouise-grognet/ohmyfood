@@ -6,7 +6,6 @@ $gray-light:#F2F2F2;
 $gray-medium : #D9D9D9;
 $footer-background:#444140;
 $card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
-$width-max-smartphone:375px;
 $width-max-desktop:1440px;
 
 @mixin text-center {
@@ -28,7 +27,7 @@ $width-max-desktop:1440px;
 }
 
 body {
-    max-width: $width-max-smartphone;
+    max-width: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +47,7 @@ body {
 
     .logoAnimation {
         position: fixed;
-        width: 20%;
+        width: 40%;
         top: 28%;
         font-size: 2.5em;
     }
@@ -89,26 +88,33 @@ body {
     opacity:0;
     animation:fadeIn 0.3s ease-in-out forwards;
     animation-delay: 1.5s;
+    width: 100%;
 }
 
 
 
 /************* HEADER ************/
+
+header {
+    max-width: 768px;
+}
+
 .logoBlock {
-    width: $width-max-smartphone;
     @include text-center;
     background-color: white;
     padding: 5px 0;
+    text-align: center;
+
+
 
     img {
-        width: 150px;
+        width: 60%;
         height: auto;
 
     }
 
 }
 .localisationBlock {
-    width: $width-max-smartphone;
     @include text-center;
     background-color: $gray-medium;
     filter:$card-shadow;
@@ -136,7 +142,6 @@ body {
 /***************** MAIN ****************/
 
 .introBlock {
-    width: $width-max-smartphone;
     @include text-center;
     flex-direction: column;
     padding: 15px 0;
@@ -148,12 +153,13 @@ body {
         font-weight: bold;
         font-size: 1.5em;
         text-align: center;
-        padding-top: 30px;
+        padding: 30px 15px 0 15px;
     }
 
     .introBlock__p {
         @include p-properties;
         font-weight: 300;
+        padding: 0 20px;
     }
 
     .search-button-purple {
@@ -203,8 +209,8 @@ body {
         .functionnementBlock__searchButton {
             display: flex;
             border-radius: 15px;
-            height: 50px;
-            width:90%;
+            height: 60px;
+            width:65%;
             padding: 0;
             margin-left: 15px;
             gap:15px;
@@ -235,6 +241,10 @@ body {
                 font-size: 20px;
             }
 
+            .search {
+                padding-right: 10px;
+            }
+
 .restaurantBlock {
     background-color: $gray-light;
     display: flex;
@@ -244,14 +254,14 @@ body {
     .proposalsRestaurants {
         @include text-center;
         flex-direction: column;
-        gap:15px;
+        gap:20px;
         margin-bottom:35px;
     }
     .card {
             border-radius: 20px;
             background-color: white;
-            height: 220px;
-            width: 330px;
+            height: 240px;
+            width: 350px;
             position: relative;
             text-decoration: none;
             color:black;
@@ -327,7 +337,6 @@ body {
 /***************** FOOTER ****************/
 
 footer {
-    width: $width-max-smartphone;
     height: 100%;
     background-color: $footer-background;
     display: flex;
