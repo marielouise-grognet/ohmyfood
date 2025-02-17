@@ -27,7 +27,7 @@ $width-max-desktop:1440px;
 }
 
 body {
-    max-width: 1024px;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@ body {
 
     .logoAnimation {
         position: fixed;
-        width: 40%;
+        width:250px;
         top: 28%;
         font-size: 2.5em;
     }
@@ -95,9 +95,6 @@ body {
 
 /************* HEADER ************/
 
-header {
-    max-width: 768px;
-}
 
 .logoBlock {
     @include text-center;
@@ -129,7 +126,7 @@ header {
             font-weight: bold;
             text-align: center;
             &:focus {
-                border: none;
+                outline:none;
             } 
         
             &::placeholder {
@@ -366,139 +363,54 @@ footer {
 @media screen and (min-width: 1024px) {
 
 body {
-    min-width: 1024px;
-    max-width:1440px;
-    margin: 0 auto;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $width-max-desktop;
 
-.content {
-    width:100%;
-} 
-
-    .logoBlock {
-        min-width :100%;
-   
-
-        img {
-            width: 250px;
-            height: auto;
-            padding-top: 20px;
-        }
-    }
-
-
-
-
-    .localisationBlock {
+    .content {
         width:100%;
-        height: 70px;
-    
-
-        .search-input {
-            &::placeholder {
-                font-size:1.5em;
-            }
-        } 
     }
-    .introBlock {
-        width: 100%;
+}
 
-        .introBlock__title {
-            font-size: 2.5em;
-        }
+header {
+    max-width: 1440px;
+}
 
-        .introBlock__p {
-            font-size: 1.4em;
-            padding-bottom: 15px;
-        }
+.functionnementBlock {
+    padding : 10px 130px;
 
-        .search-button-purple {
-            width: 300px;
-            height: auto;
-
-            .search {
-                font-size: 1.5em;
-            }
-        }
-    }
-    .functionnementBlock {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    
     .titleBlock {
-        font-size: 1.8em;
+        padding-left: 5px;
     }
-    
     .proposals {
         display: flex;
         flex-direction: row;
     }
+}
 
-    .functionnementBlock__searchButton {
-        width :350px;
-        height: 70px;
-
-        .search {
-            font-size: 1.2em;
-            margin-right: 5%;
-        }
-    }
+.restaurantBlock {
+    padding: 0 130px;
 
     .titleBlock {
-        padding-left:15px;
+        padding-left: 5px;
     }
-
-    .restaurantBlock {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
     .proposalsRestaurants {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap:55px;
+        gap:80px;
+
+        .card {
+            width:520px;
+            height:280px;
+
+            .name-localisation-heart {
+                padding-top: 10px;
+                font-size: 1.2em;
+            }
+        }
     }
+}
 
-        .card{
-            width:47%;
-            height: 250px;
-
-        }
-
-        .new {
-            position: absolute;
-            right:5%;
-            bottom: 80%;
-
-        }
-    
-    footer {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 30px;
-        padding-top: 40px;
-        position: relative;
-    }
-
-        .logo-footer {
-        width: 10%;
-        position: absolute;
-        right:5%;
-
-        }
-
-        .footerContent {
-            display :flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            padding-right: 250px;
-            padding-top: 8px;
-            width: 100%;
-        }
-    }    
-    
-
-
+}
