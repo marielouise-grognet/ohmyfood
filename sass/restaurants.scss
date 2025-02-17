@@ -1,0 +1,396 @@
+
+$color-primary : #9356DC;
+$color-second : #FF79DA;
+$color-tertiar: #99E2D0;
+$gray-light:#F2F2F2;
+$gray-medium : #D9D9D9;
+$footer-background:#444140;
+$card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
+$width-max-smartphone:375px;
+$width-max-desktop:1440px;
+
+@mixin text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin p-properties {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 0px;
+}
+
+@mixin heart {
+    padding: 15px 15px 0;
+    font-size: 20px;
+    background-color: white;
+}
+
+body {
+    max-width: $width-max-smartphone;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:"roboto";
+    margin: 0;
+}
+
+
+html {
+    max-width: $width-max-smartphone;
+}
+
+/*********HEADER************/
+
+.header {
+    width: 100%;
+}
+
+.logoBlock {
+    position: relative;
+    width: $width-max-smartphone;
+    background-color: white;
+    padding: 5px 0;
+    @include text-center;
+    height:55px;
+
+    .fa-arrow-left {
+        font-size: 1.4em;
+        position: absolute;
+        right: 320px;
+        top:25px;
+        cursor: pointer;
+        color: black;
+    }
+
+    img {
+        width: 180px;
+        height: auto;
+        padding-top: 15px;
+    }
+
+}
+
+.photoRestaurant {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.restaurantBlock {
+    width: $width-max-smartphone;
+    background-color: $gray-light;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    margin-top:-30px;
+    display: flex;
+    flex-direction: column;
+    
+    .restaurantBlock__title {
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+    
+        h1 {
+            font-family: "Shrikhand";
+            font-size: 1.8em;
+        }
+
+        .fa-heart {
+            font-size: 1.5em;
+            padding: 28px 35px 0 0 ;
+            cursor: pointer;
+        }
+    }
+
+    .plateBlock {
+        margin-bottom: 20px;
+
+        .plateBlock__title {
+            padding-left: 18px;
+            font-size: 1.2em;
+
+            .border {
+                border-bottom: 3px solid $color-tertiar;
+                padding-bottom: 5px;
+                width: 50px;
+            }
+        }
+
+        .plateBlock__proposals {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            
+            .dishBlock {
+                background-color: white;
+                width: 85%;
+                border-radius: 15px;
+                padding :15px 10px 10px 10px;
+                filter:$card-shadow;
+                height:50px;
+                cursor: pointer;
+                
+
+
+                .dishBlock__title {
+                    font-weight: 500;
+                    font-size: 1.1em;
+                }
+
+                .dishBlock__content {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .dishBlock__precisions {
+                        font-weight: 300;
+                        font-size: 0.9em;
+                    }
+                    .dishBlock__price {
+                        font-weight: 500;
+                    }
+                }
+            }
+            .fa-circle-check {
+                display: none;
+            }
+            }
+        
+        }
+
+        
+    }
+
+    .order-button-purple {
+        width: 55%;
+        margin:30px auto;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 0 darkgrey;
+        padding :20px;
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(90deg, #FF79DA, #9356DC);
+        color:white;
+        transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        &:hover{
+            filter:brightness(1.1);
+            box-shadow: 0.5px 0.5px 5px 0 black;
+        }
+        .search {
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+    }
+
+
+    footer {
+        width: $width-max-smartphone;
+        height: 100%;
+        background-color: $footer-background;
+        padding:20px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo-footer {
+        width : 30%;
+        filter:invert(1);
+        padding: 20px 0 20px 20px;
+    }
+    
+    .p__footer--bold {
+        font-weight: bold;
+        margin: 15px 0 0 0;
+    }
+    
+    .p__footer {
+        text-align: left;
+        padding-left: 20px;
+        color: white;
+        margin: 15px 0 0 0;
+    }
+
+/*****************MEDIA QUERIS DESKTOP**********************/
+
+@media screen and (min-width: 1024px) {
+
+html {
+    max-width:1440px;
+    margin: 0 auto;
+}
+
+
+body {
+    max-width:1440px;
+    margin: 0 auto;
+}
+
+header {
+    width:100%;
+    max-width:1440px;
+    margin: 0 auto;
+
+}
+
+main {
+    max-width:1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+    .logoBlock {
+        max-width: 1440px;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        
+        img {
+            text-align: center;
+        }
+
+        .fa-arrow-left {
+            left:30px;
+        }
+    }
+
+    .photoRestaurant {
+        max-width:100%;
+        height:350px;
+        object-fit: cover;
+        object-position: 50% 57%;
+        display: block;    
+    }    
+
+    .restaurantBlock {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin : -30px auto;
+        padding-bottom: 30px;
+
+        .restaurantBlock__title {
+            justify-content: center;
+            gap:30px;
+        }
+
+        .plateBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .plateBlock__title {
+                padding-left:0;
+            }
+            .plateBlock__proposals {
+                justify-content: center;
+
+                .dishBlock {
+                    height: 70px;
+                    width:600px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 0;
+                    position: relative;
+
+
+                    .dishblock_withoutAnimation {
+                        width:100%;
+
+                        .dishBlock__title {
+                            padding: 10px 0 0 13px;
+                        }
+
+                        .dishBlock__content{
+                            padding : 7px 10px 0 13px;
+
+                        }
+                    }
+
+                    .dishBlock__Animation {
+                        display: flex;
+                        width : 0%;
+                        background-color: $color-tertiar;
+                        margin-right: 0;
+                        padding-right: 0;
+                        border-radius: 0 15px 15px 0 ;
+                        transition: width 1s ease;
+                        position: relative;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+
+                        .fa-circle-check {
+                        
+                        display: inline;    
+                        color: white;
+                        opacity: 0;
+                        transition : opacity 1s ease;
+                        overflow: hidden;
+
+                        }
+                    }
+
+                        
+                &:hover {
+                    .dishBlock__Animation {
+                        width:12%;
+                        
+                        .fa-circle-check {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                        
+                
+                }
+    
+
+                    .dishBlock__title {
+                        padding: 3px;
+                    }
+                    .dishBlock__content {
+                        padding: 3px;
+                    }
+                }
+            }
+
+            }
+
+            .order-button-purple {
+                width: 20%;
+            }                
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+        padding-top: 40px;
+        position: relative;
+    }
+
+        .logo-footer {
+        width: 10%;
+        position: absolute;
+        right:5%;
+
+        }
+
+        .footerContent {
+            display :flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding-right: 250px;
+            padding-top: 8px;
+            width: 100%;
+        }
+    
