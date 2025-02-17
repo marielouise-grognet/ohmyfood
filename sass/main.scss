@@ -377,6 +377,16 @@ header {
     max-width: 1440px;
 }
 
+.introBlock {
+    .introBlock__title {
+        font-size: 2.2em;
+    }
+    .introBlock__p {
+        padding-bottom: 15px;
+
+    }
+}
+
 .functionnementBlock {
     padding : 10px 130px;
 
@@ -402,7 +412,7 @@ header {
         gap:80px;
 
         .card {
-            width:520px;
+            width:450px;
             height:280px;
 
             .name-localisation-heart {
@@ -410,6 +420,25 @@ header {
                 font-size: 1.2em;
             }
         }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 45px;
+
+    .footerContent {
+        display: flex;
+        flex-direction: row;
+        padding-top: 70px;
+    }
+
+    .logo-footer {
+        width:140px;
+        padding-right: 30px;
+        padding-top: 80px;
+
     }
 }
 
