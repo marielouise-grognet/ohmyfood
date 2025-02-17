@@ -1,5 +1,9 @@
-body {
-  max-width: 375px;
+html {
+  width: 100%;
+  max-width: 3280px;
+}
+html body {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,18 +11,12 @@ body {
   margin: 0;
 }
 
-html {
-  max-width: 375px;
-}
-
 /*********HEADER************/
-.header {
+header {
   width: 100%;
 }
-
-.logoBlock {
+header .logoBlock {
   position: relative;
-  width: 375px;
   background-color: white;
   padding: 5px 0;
   display: flex;
@@ -26,28 +24,29 @@ html {
   align-items: center;
   height: 55px;
 }
-.logoBlock .fa-arrow-left {
+header .logoBlock .fa-arrow-left {
   font-size: 1.4em;
   position: absolute;
-  right: 320px;
+  left: 30px;
   top: 25px;
   cursor: pointer;
   color: black;
 }
-.logoBlock img {
+header .logoBlock img {
   width: 180px;
   height: auto;
   padding-top: 15px;
 }
-
-.photoRestaurant {
+header .photoRestaurant {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-.restaurantBlock {
-  width: 375px;
+main {
+  width: 80%;
+}
+main .restaurantBlock {
   background-color: #F2F2F2;
   border-radius: 30px 30px 0 0;
   position: relative;
@@ -55,67 +54,67 @@ html {
   display: flex;
   flex-direction: column;
 }
-.restaurantBlock .restaurantBlock__title {
+main .restaurantBlock .restaurantBlock__title {
   padding-left: 15px;
   display: flex;
   justify-content: space-between;
 }
-.restaurantBlock .restaurantBlock__title h1 {
+main .restaurantBlock .restaurantBlock__title h1 {
   font-family: "Shrikhand";
   font-size: 1.8em;
 }
-.restaurantBlock .restaurantBlock__title .fa-heart {
+main .restaurantBlock .restaurantBlock__title .fa-heart {
   font-size: 1.5em;
   padding: 28px 35px 0 0;
   cursor: pointer;
 }
-.restaurantBlock .plateBlock {
+main .restaurantBlock .plateBlock {
   margin-bottom: 20px;
 }
-.restaurantBlock .plateBlock .plateBlock__title {
+main .restaurantBlock .plateBlock .plateBlock__title {
   padding-left: 18px;
   font-size: 1.2em;
 }
-.restaurantBlock .plateBlock .plateBlock__title .border {
+main .restaurantBlock .plateBlock .plateBlock__title .border {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 50px;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals {
+main .restaurantBlock .plateBlock .plateBlock__proposals {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: center;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .dishBlock {
+main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock {
   background-color: white;
   width: 85%;
+  max-width: 400px;
   border-radius: 15px;
   padding: 15px 10px 10px 10px;
   filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
   height: 50px;
   cursor: pointer;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__title {
+main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__title {
   font-weight: 500;
   font-size: 1.1em;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content {
+main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content {
   display: flex;
   justify-content: space-between;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content .dishBlock__precisions {
+main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content .dishBlock__precisions {
   font-weight: 300;
   font-size: 0.9em;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content .dishBlock__price {
+main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__content .dishBlock__price {
   font-weight: 500;
 }
-.restaurantBlock .plateBlock .plateBlock__proposals .fa-circle-check {
+main .restaurantBlock .plateBlock .plateBlock__proposals .fa-circle-check {
   display: none;
 }
-
-.order-button-purple {
+main .order-button-purple {
   width: 55%;
   margin: 30px auto;
   cursor: pointer;
@@ -127,18 +126,17 @@ html {
   color: white;
   transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.order-button-purple:hover {
+main .order-button-purple:hover {
   filter: brightness(1.1);
   box-shadow: 0.5px 0.5px 5px 0 black;
 }
-.order-button-purple .search {
+main .order-button-purple .search {
   font-weight: 700;
   font-size: 1.2em;
 }
 
 footer {
-  width: 375px;
-  height: 100%;
+  width: 3280px;
   background-color: #444140;
   padding: 20px 0;
   display: flex;
@@ -164,38 +162,34 @@ footer {
 }
 
 /*****************MEDIA QUERIS DESKTOP**********************/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   html {
-    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
   }
   body {
-    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
   }
   header {
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
   }
   main {
-    max-width: 1440px;
+    width: 3280px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
   }
   .logoBlock {
-    max-width: 1440px;
+    width: 3280px;
     width: 100%;
     justify-content: center;
     align-content: center;
   }
   .logoBlock img {
     text-align: center;
-  }
-  .logoBlock .fa-arrow-left {
-    left: 30px;
   }
   .photoRestaurant {
     max-width: 100%;
@@ -229,7 +223,7 @@ footer {
   }
   .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock {
     height: 70px;
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
