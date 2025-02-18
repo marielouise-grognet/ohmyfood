@@ -8,6 +8,10 @@ $footer-background:#444140;
 $card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
 $width-max-desktop:3280px;
 
+a {
+    text-decoration: none;
+} 
+
 @mixin text-center {
     display: flex;
     justify-content: center;
