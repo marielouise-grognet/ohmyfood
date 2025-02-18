@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 body {
   max-width: 3280px;
   display: flex;
@@ -345,6 +349,21 @@ footer {
   }
   .restaurantBlock .titleBlock {
     margin-left: 100px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 45px;
+  }
+  footer .footerContent {
+    display: flex;
+    flex-direction: row;
+    padding-top: 70px;
+  }
+  footer .logo-footer {
+    width: 140px;
+    padding-right: 30px;
+    padding-top: 80px;
   }
 }
 @media screen and (min-width: 1200px) {
