@@ -95,18 +95,17 @@ body {
   height: 45px;
   gap: 5px;
 }
-
-.search-input {
+.localisationBlock .search-input {
   border: none;
   background-color: #d9d9d9;
   padding: 8px 9px 0 9px;
   font-weight: bold;
   text-align: center;
 }
-.search-input:focus {
+.localisationBlock .search-input:focus {
   outline: none;
 }
-.search-input::placeholder {
+.localisationBlock .search-input::placeholder {
   color: black;
   font-size: 1.2em;
 }
@@ -166,8 +165,7 @@ body {
   flex-direction: column;
   padding-bottom: 30px;
 }
-
-.titleBlock {
+.functionnementBlock .titleBlock {
   font-size: 1.1em;
   text-align: center;
   margin-top: 0px;
@@ -175,10 +173,9 @@ body {
   font-size: 1.5em;
   padding-top: 30px;
   text-align: start;
-  padding-left: 25px;
+  padding-left: 55px;
 }
-
-.proposals {
+.functionnementBlock .proposals {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,8 +183,7 @@ body {
   gap: 20px;
   margin-bottom: 35px;
 }
-
-.functionnementBlock__searchButton {
+.functionnementBlock .functionnementBlock__searchButton {
   display: flex;
   border-radius: 15px;
   height: 60px;
@@ -202,12 +198,11 @@ body {
   cursor: pointer;
   transition: transform 400ms;
 }
-.functionnementBlock__searchButton:hover {
+.functionnementBlock .functionnementBlock__searchButton:hover {
   transform: scale(1.03);
   box-shadow: 0.5px 0.5px 10px 0 rgb(179, 177, 177);
 }
-
-.number {
+.functionnementBlock .number {
   border-radius: 50%;
   background-color: #9356DC;
   padding: 5px;
@@ -218,13 +213,11 @@ body {
   left: -10px;
   font-size: small;
 }
-
-.picto-button {
+.functionnementBlock .picto-button {
   color: #9356DC;
   font-size: 20px;
 }
-
-.search {
+.functionnementBlock .search {
   padding-right: 10px;
 }
 
@@ -234,8 +227,10 @@ body {
   flex-direction: column;
   padding-bottom: 30px;
 }
-
-.proposalsRestaurants {
+.restaurantBlock .titleBlock {
+  padding-left: 55px;
+}
+.restaurantBlock .proposalsRestaurants {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,8 +238,7 @@ body {
   gap: 20px;
   margin-bottom: 35px;
 }
-
-.card {
+.restaurantBlock .card {
   border-radius: 20px;
   background-color: white;
   height: 240px;
@@ -253,15 +247,13 @@ body {
   text-decoration: none;
   color: black;
 }
-
-.photo-restaurant {
+.restaurantBlock .photo-restaurant {
   width: 100%;
   border-radius: 20px 20px 0 0;
   height: 70%;
   object-fit: cover;
 }
-
-.new {
+.restaurantBlock .new {
   background-color: #99E2D0;
   position: absolute;
   width: 70px;
@@ -271,13 +263,11 @@ body {
   padding-left: 2%;
   color: #1b6150;
 }
-
-.name-localisation-heart {
+.restaurantBlock .name-localisation-heart {
   display: flex;
   justify-content: space-between;
 }
-
-.heart {
+.restaurantBlock .heart {
   display: inline;
   position: relative;
   padding: 15px 15px 0;
@@ -286,7 +276,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-.heart::after {
+.restaurantBlock .heart::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -301,20 +291,18 @@ body {
   transition: width 0.5s ease-in-out;
   overflow: hidden;
 }
-.heart:hover {
+.restaurantBlock .heart:hover {
   transform: scale(1);
 }
-.heart:hover::after {
+.restaurantBlock .heart:hover::after {
   width: 100%;
 }
-
-.restaurant__name {
+.restaurantBlock .restaurant__name {
   font-weight: bold;
   text-align: left;
   margin: 5px 0 3px 15px;
 }
-
-.restaurant__localisation {
+.restaurantBlock .restaurant__localisation {
   text-align: left;
   margin: 0 0 0 15px;
   font-weight: 300;
@@ -347,7 +335,18 @@ footer {
   margin: 15px 0 0 0;
 }
 
-/*****************MEDIA QUERIS DESKTOP**********************/
+/*****************MEDIA QUERIES**********************/
+@media screen and (min-width: 768px) {
+  .functionnementBlock .titleBlock {
+    margin-left: 100px;
+  }
+  .functionnementBlock .functionnementBlock__searchButton {
+    max-width: 550px;
+  }
+  .restaurantBlock .titleBlock {
+    margin-left: 100px;
+  }
+}
 @media screen and (min-width: 1200px) {
   body {
     margin-left: auto;
@@ -372,6 +371,7 @@ footer {
   }
   .functionnementBlock .titleBlock {
     padding-left: 5px;
+    margin-left: 0;
   }
   .functionnementBlock .proposals {
     display: flex;
@@ -382,6 +382,7 @@ footer {
   }
   .restaurantBlock .titleBlock {
     padding-left: 5px;
+    margin-left: 0;
   }
   .restaurantBlock .proposalsRestaurants {
     display: flex;
