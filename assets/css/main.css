@@ -318,7 +318,7 @@ footer {
 }
 
 .logo-footer {
-  width: 30%;
+  width: 200px;
   filter: invert(1);
   padding: 20px 0 20px 20px;
 }
@@ -388,11 +388,11 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 50px;
     justify-content: space-between;
   }
   .restaurantBlock .proposalsRestaurants .card {
-    width: 45%;
+    width: 43%;
     height: 280px;
   }
   .restaurantBlock .proposalsRestaurants .card .name-localisation-heart {
@@ -413,5 +413,11 @@ footer {
     width: 140px;
     padding-right: 30px;
     padding-top: 80px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  html {
+    width: 1500px;
+    margin: 0 auto;
   }
 }
