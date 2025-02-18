@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
 }
@@ -13,6 +14,33 @@ html body {
   align-items: center;
   font-family: "roboto";
   margin: 0;
+}
+
+/* Définition de l'animation fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Le titre commence en bas, puis remonte */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Il arrive à sa position d'origine */
+  }
+}
+/* Appliquer l'animation de fade-in à tous les titres de plateaux */
+.plateBlock {
+  opacity: 0; /* Les titres sont invisibles au départ */
+  animation: fadeIn 1s ease-out forwards; /* Animation fadeIn */
+  /* Délai d'animation basé sur l'index de chaque plateau */
+}
+.plateBlock:nth-of-type(1) {
+  animation-delay: 0.8s; /* Entrées apparaît d'abord */
+}
+.plateBlock:nth-of-type(2) {
+  animation-delay: 0s; /* Plats apparaît après 0.5 seconde */
+}
+.plateBlock:nth-of-type(3) {
+  animation-delay: 0.4s; /* Desserts apparaît après 1 seconde */
 }
 
 /*********HEADER************/
