@@ -8,6 +8,10 @@ $footer-background:#444140;
 $card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
 $width-max-desktop:3280px;
 
+a {
+    text-decoration: none;
+} 
+
 @mixin text-center {
     display: flex;
     justify-content: center;
@@ -362,6 +366,8 @@ footer {
     padding-left: 20px;
     color: white;
     margin: 15px 0 0 0;
+
+   
 }
 
 /*****************MEDIA QUERIES**********************/
@@ -381,6 +387,25 @@ footer {
         .titleBlock {
             margin-left: 100px;
         } 
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 45px;
+    
+        .footerContent {
+            display: flex;
+            flex-direction: row;
+            padding-top: 70px;
+        }
+    
+        .logo-footer {
+            width:140px;
+            padding-right: 30px;
+            padding-top: 80px;
+    
+        }
     }
 }
 
@@ -474,6 +499,7 @@ footer {
 }
 
 }
+
 @media screen and (min-width: 1500px) {
     html {
         width:1500px;
