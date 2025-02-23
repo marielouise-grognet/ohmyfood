@@ -46,34 +46,33 @@ body {
 }
 }
 
-/* Définition de l'animation fadeIn */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-50px);  /* Le titre commence en bas, puis remonte */
+        transform: translateY(-50px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0);  /* Il arrive à sa position d'origine */
+        transform: translateY(0); 
     }
 }
 
-/* Appliquer l'animation de fade-in à tous les titres de plateaux */
-.plateBlock {
-    opacity: 0;  /* Les titres sont invisibles au départ */
-    animation: fadeIn 1s ease-out forwards;  /* Animation fadeIn */
 
-    /* Délai d'animation basé sur l'index de chaque plateau */
+.plateBlock {
+    opacity: 0;  
+    animation: fadeIn 1s ease-out forwards; 
+
+ 
     &:nth-of-type(1) {
-        animation-delay: 0.8s;  /* Entrées apparaît d'abord */
+        animation-delay: 0.8s;  
     }
 
     &:nth-of-type(2) {
-        animation-delay: 0s;  /* Plats apparaît après 0.5 seconde */
+        animation-delay: 0s;  
     }
 
     &:nth-of-type(3) {
-        animation-delay: 0.4s;  /* Desserts apparaît après 1 seconde */
+        animation-delay: 0.4s; 
     }
 }
 
@@ -136,19 +135,21 @@ main {
         h1 {
             font-family: "Shrikhand";
             font-size: 1.8em;
+            padding-right: 4px;
         }
 
         .fa-heart {
             font-size: 1.5em;
-            padding: 28px 35px 0 0 ;
+            padding: 28px 0 0 0 ;
+            margin-right: 35px;
             cursor: pointer;
             position: relative;
             transition: transform 0.3s ease-in-out;
 
             &::after {
-                content: "\f004"; // Même cœur
+                content: "\f004"; 
                 font-family: "Font Awesome 6 Free";
-                font-weight: 900; // Cœur plein (fa-solid)
+                font-weight: 900; 
                 position: absolute;
                 top: 28px;
                 left: 0px;
@@ -163,10 +164,10 @@ main {
             }
 
             &:hover {
-                transform: scale(1.0); // Effet de zoom
+                transform: scale(1.0); 
 
                 &::after {
-                width: 100%; // Remplissage progressif
+                width: 100%; 
                 opacity: 1;
                 }
             }
@@ -202,7 +203,7 @@ main {
                 width : 85%;
                 border-radius: 15px;
                 filter:$card-shadow;
-                height:80px;
+                min-height:80px;
                 cursor: pointer;
                 
                 .dishblock_withoutAnimation {
@@ -226,6 +227,7 @@ main {
                         }
                         .dishBlock__price {
                             font-weight: 500;
+                            margin-right: 10px;
                         }
                     }
                 }
@@ -400,6 +402,7 @@ main {
                     justify-content: space-between;
                     padding: 0;
                     position: relative;
+                    
 
                     .dishblock_withoutAnimation {
                         width:100%;
