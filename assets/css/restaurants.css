@@ -114,14 +114,12 @@ main .restaurantBlock .restaurantBlock__title .fa-heart::after {
   -webkit-text-fill-color: transparent;
   transition: width 0.5s ease-in-out;
   overflow: hidden;
-  opacity: 0;
 }
 main .restaurantBlock .restaurantBlock__title .fa-heart:hover {
   transform: scale(1);
 }
 main .restaurantBlock .restaurantBlock__title .fa-heart:hover::after {
   width: 100%;
-  opacity: 1;
 }
 main .restaurantBlock .plateBlock {
   margin-bottom: 20px;
