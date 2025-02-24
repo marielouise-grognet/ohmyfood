@@ -3,7 +3,7 @@
 https://marielouise-grognet.github.io/ohmyfood/index.html) développé en mobile first.
 
 ## **Description**  
-Projet réalisé dans le cadre de la formation Développeur d'applications JavaScrip React chez OpenClassrooms.  
+Projet réalisé dans le cadre de la formation Développeur d'applications JavaScript React chez OpenClassrooms.  
 
 ## **Objectif**  
 Développer un site en "mobile first" qui repertorie les menus de restaurants gastroniques sur Paris.
@@ -12,14 +12,14 @@ Développer un site en "mobile first" qui repertorie les menus de restaurants ga
 Mise en forme en CSS (pas de JavaScript) ; écriture en format .scss et conversion en .css via Live Sass Compiler intégré à VS Code.  
 Aucun framework utilisé.  
 Intégration en premier lieu de la maquette mobile, puis tablette, puis desktop.  
-Html et css validé sur W3C.
+Html et css validés sur W3C.  
 Versionning vers GitHub avec commits réguliers.  
 
 ## **Contenu des pages**  
   
   - **Page d'accueil :**
     - Affichage de la localisation des restaurants.
-    - Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte, l'utilisation est redirigé vers la page du menu.
+    - Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte, l'utilisateur est redirigé vers la page du menu.
       
   - **Page de menu (x4) :**
     - 4 pages contenant chacune le menu d'un restaurant.
@@ -33,7 +33,7 @@ Versionning vers GitHub avec commits réguliers.
     - Le footer est identique sur toutes les pages.
     - Au clic sur "Contact", un renvoi est fait vers une adresse mail.
 
-## **Effets graphiques et animation :**  
+## **Effets graphiques et animations :**  
 
   - **Boutons :**
     - Au survol, la couleur de fond des boutons principaux s'éclaircit et l'ombre portée est plus vibible.
