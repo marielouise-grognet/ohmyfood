@@ -146,13 +146,17 @@ main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock {
   width: 85%;
   border-radius: 15px;
   filter: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
-  min-height: 80px;
+  height: 80px;
   cursor: pointer;
 }
 main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishblock_withoutAnimation {
   width: 100%;
 }
 main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishblock_withoutAnimation .dishBlock__title {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 500;
   font-size: 1.1em;
   padding: 15px 0 10px 15px;
@@ -164,6 +168,10 @@ main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishblock_w
   padding: 0 10px 10px 15px;
 }
 main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishblock_withoutAnimation .dishBlock__content .dishBlock__precisions {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 300;
   font-size: 0.9em;
   padding-right: 5px;
@@ -188,6 +196,7 @@ main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__
 main .restaurantBlock .plateBlock .plateBlock__proposals .dishBlock .dishBlock__Animation .fa-circle-check {
   display: inline;
   color: white;
+  font-size: 1.3em;
   opacity: 0;
   transition: opacity 1s ease;
   overflow: hidden;
