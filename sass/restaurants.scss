@@ -201,12 +201,16 @@ main {
                 width : 85%;
                 border-radius: 15px;
                 filter:$card-shadow;
-                min-height:80px;
+                height:80px;
                 cursor: pointer;
                 
                 .dishblock_withoutAnimation {
                     width: 100%;
                     .dishBlock__title {
+                        max-width: 70%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         font-weight: 500;
                         font-size: 1.1em;
                         padding : 15px 0 10px 15px;
@@ -219,6 +223,10 @@ main {
                         padding: 0 10px 10px 15px;
                     
                         .dishBlock__precisions {
+                            max-width: 70%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                             font-weight: 300;
                             font-size: 0.9em;
                             padding-right: 5px;
@@ -246,6 +254,7 @@ main {
                     .fa-circle-check {
                     display: inline;    
                     color: white;
+                    font-size: 1.3em;
                     opacity: 0;
                     transition : opacity 1s ease;
                     overflow: hidden;

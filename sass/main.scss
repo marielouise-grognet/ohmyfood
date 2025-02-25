@@ -6,7 +6,7 @@ $gray-light:#F2F2F2;
 $gray-medium : #D9D9D9;
 $footer-background:#444140;
 $card-shadow: drop-shadow(1px 5px 5px rgba(0, 0, 0, 0.2));
-$width-max-desktop:3280px;
+$width-max-desktop:1500px;
 
 a {
     text-decoration: none;
@@ -48,6 +48,7 @@ body {
     background: white;
     animation: fadeOut 0.5s forwards;
     animation-delay: 1s;
+    position: fixed;
 
     .logoAnimation {
         position: fixed;
@@ -57,7 +58,7 @@ body {
     }
 
     .loaderBlock__text {
-        position:fixed;
+        position: fixed;
         top:46%;
         font-size: 1.3em;
     }
@@ -320,7 +321,7 @@ body {
                     }
 
                     &:hover {
-                        transform: scale(1.0); // Effet de zoom
+                        transform: scale(1.0); 
 
                         &::after {
                         width: 100%; // Remplissage progressif
@@ -366,8 +367,6 @@ footer {
     padding-left: 20px;
     color: white;
     margin: 15px 0 0 0;
-
-   
 }
 
 /*****************MEDIA QUERIES**********************/
@@ -500,10 +499,3 @@ footer {
 
 }
 
-@media screen and (min-width: 1500px) {
-    html {
-        width:1500px;
-        margin:0 auto;
-        
-    }
-}
